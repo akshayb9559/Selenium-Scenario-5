@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,6 +31,8 @@ public class Excel_Read {
 		for (int i = 1; i <= rowcount; i++) {
 			int id = (int) sheet.getRow(i).getCell(0).getNumericCellValue();
 			String name = sheet.getRow(i).getCell(1).getStringCellValue();
+			
+			Assert.assertNotNull(name);
 
 			System.out.print(id);
 			System.out.print("  ");

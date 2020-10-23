@@ -32,7 +32,8 @@ public class Screenshot_WebPage {
 			File image = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
 			File destination = new File("D:\\Certification Data\\Take_ScreenShot.jpg");
 			Files.copy(image, destination);
-			
+
+
 		} catch (IOException e) {
 			System.out.println("Message : " + e.getMessage());
 		}
